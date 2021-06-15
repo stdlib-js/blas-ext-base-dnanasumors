@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/blas-ext-base-dnanasumors",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Calculate the sum of absolute values (L1 norm) of double-precision floating-point strided array elements, ignoring NaN values and using ordinary recursive summation.",
   "license": "Apache-2.0",
   "author": {
