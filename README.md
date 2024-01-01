@@ -56,14 +56,30 @@ The [_L1_ norm][l1norm] is defined as
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-ext-base-dnanasumors
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import dnanasumors from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-dnanasumors@esm/index.mjs';
+var dnanasumors = require( '@stdlib/blas-ext-base-dnanasumors' );
 ```
 
 #### dnanasumors( N, x, stride )
@@ -71,7 +87,7 @@ import dnanasumors from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-dna
 Computes the sum of absolute values ([_L1_ norm][l1norm]) of double-precision floating-point strided array elements, ignoring `NaN` values and using ordinary recursive summation.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ 1.0, -2.0, NaN, 2.0 ] );
 var N = x.length;
@@ -89,8 +105,8 @@ The function has the following parameters:
 The `N` and `stride` parameters determine which elements in `x` are accessed at runtime. For example, to compute the sum of absolute values ([_L1_ norm][l1norm]) every other element in `x`,
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var floor = require( '@stdlib/math-base-special-floor' );
 
 var x = new Float64Array( [ 1.0, 2.0, NaN, -7.0, NaN, 3.0, 4.0, 2.0 ] );
 var N = floor( x.length / 2 );
@@ -104,8 +120,8 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var floor = require( '@stdlib/math-base-special-floor' );
 
 var x0 = new Float64Array( [ 2.0, 1.0, NaN, -2.0, -2.0, 2.0, 3.0, 4.0 ] );
 var x1 = new Float64Array( x0.buffer, x0.BYTES_PER_ELEMENT*1 ); // start at 2nd element
@@ -121,7 +137,7 @@ var v = dnanasumors( N, x1, 2 );
 Computes the sum of absolute values ([_L1_ norm][l1norm]) of double-precision floating-point strided array elements, ignoring `NaN` values and using ordinary recursive summation and alternative indexing semantics.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ 1.0, -2.0, NaN, 2.0 ] );
 var N = x.length;
@@ -137,8 +153,8 @@ The function has the following additional parameters:
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the `offset` parameter supports indexing semantics based on a starting index. For example, to calculate the sum of absolute values ([_L1_ norm][l1norm]) every other value in `x` starting from the second value
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var floor = require( '@stdlib/math-base-special-floor' );
 
 var x = new Float64Array( [ 2.0, 1.0, NaN, -2.0, -2.0, 2.0, 3.0, 4.0 ] );
 var N = floor( x.length / 2 );
@@ -168,16 +184,11 @@ var v = dnanasumors.ndarray( N, x, 2, 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import dnanasumors from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-dnanasumors@esm/index.mjs';
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var round = require( '@stdlib/math-base-special-round' );
+var Float64Array = require( '@stdlib/array-float64' );
+var dnanasumors = require( '@stdlib/blas-ext-base-dnanasumors' );
 
 var x;
 var i;
@@ -194,10 +205,6 @@ console.log( x );
 
 var v = dnanasumors( x.length, x, 1 );
 console.log( v );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -233,7 +240,7 @@ console.log( v );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -250,7 +257,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -293,7 +300,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-base-dnanasumors/main/LICENSE
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/esm
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
@@ -301,7 +308,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/blas/ext/base/dnanasum]: https://github.com/stdlib-js/blas-ext-base-dnanasum/tree/esm
+[@stdlib/blas/ext/base/dnanasum]: https://github.com/stdlib-js/blas-ext-base-dnanasum
 
 <!-- </related-links> -->
 
