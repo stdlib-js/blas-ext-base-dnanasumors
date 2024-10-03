@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-10-01)
+## Unreleased (2024-10-03)
+
+<section class="features">
+
+### Features
+
+-   [`6fe012e`](https://github.com/stdlib-js/stdlib/commit/6fe012ee17be4a3fad36642041770de4693ef5a3) - add C `ndarray` API and refactor `blas/ext/base/dnanasumors` [(#2982)](https://github.com/stdlib-js/stdlib/pull/2982)
+
+</section>
+
+<!-- /.features -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`6fe012e`](https://github.com/stdlib-js/stdlib/commit/6fe012ee17be4a3fad36642041770de4693ef5a3) - **feat:** add C `ndarray` API and refactor `blas/ext/base/dnanasumors` [(#2982)](https://github.com/stdlib-js/stdlib/pull/2982) _(by Muhammad Haris, Athan Reines)_
 -   [`e454c91`](https://github.com/stdlib-js/stdlib/commit/e454c91ae2af928b61effcddadb31548758f8675) - **chore:** improve code style and conditionals _(by Philipp Burckhardt)_
 
 </details>
@@ -24,8 +35,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
+-   Muhammad Haris
 -   Philipp Burckhardt
 
 </section>
