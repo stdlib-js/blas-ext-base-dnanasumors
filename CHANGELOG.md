@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-07-21)
+## Unreleased (2025-08-09)
 
 <section class="features">
 
@@ -35,6 +35,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`2cffc9d`](https://github.com/stdlib-js/stdlib/commit/2cffc9d24250e42639db3f11cf49bd4e4bc174bf) - **test:** correct test assertion messages _(by Philipp Burckhardt)_
 -   [`bd0050a`](https://github.com/stdlib-js/stdlib/commit/bd0050a6aaec1ca4cdc1a4491f45084da84f5bf7) - **feat:** add `blas/ext/base/wasm/dnanasumors` [(#6110)](https://github.com/stdlib-js/stdlib/pull/6110) _(by Prashant Kumar Yadav, Athan Reines, stdlib-bot)_
 -   [`9f85b5d`](https://github.com/stdlib-js/stdlib/commit/9f85b5d90cb6fcaf052116cd06aa4a693757f0ec) - **test:** fix description _(by Philipp Burckhardt)_
 -   [`6f8225e`](https://github.com/stdlib-js/stdlib/commit/6f8225ed9afb8f2e65c672c4798253b6d8234393) - **docs:** update `blas/ext/base/dnanasumors` to follow current project conventions [(#5185)](https://github.com/stdlib-js/stdlib/pull/5185) _(by Muhammad Haris)_
