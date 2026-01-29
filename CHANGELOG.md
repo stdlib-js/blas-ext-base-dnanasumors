@@ -2,9 +2,9 @@
 
 > Package changelog.
 
-<section class="release" id="unreleased">
+<section class="release" id="v0.3.0">
 
-## Unreleased (2025-08-09)
+## 0.3.0 (2026-01-29)
 
 <section class="features">
 
@@ -35,6 +35,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`2035f34`](https://github.com/stdlib-js/stdlib/commit/2035f344a1a469278042b7532f034dc6119933b3) - **docs:** add function documentation _(by Athan Reines)_
 -   [`2cffc9d`](https://github.com/stdlib-js/stdlib/commit/2cffc9d24250e42639db3f11cf49bd4e4bc174bf) - **test:** correct test assertion messages _(by Philipp Burckhardt)_
 -   [`bd0050a`](https://github.com/stdlib-js/stdlib/commit/bd0050a6aaec1ca4cdc1a4491f45084da84f5bf7) - **feat:** add `blas/ext/base/wasm/dnanasumors` [(#6110)](https://github.com/stdlib-js/stdlib/pull/6110) _(by Prashant Kumar Yadav, Athan Reines, stdlib-bot)_
 -   [`9f85b5d`](https://github.com/stdlib-js/stdlib/commit/9f85b5d90cb6fcaf052116cd06aa4a693757f0ec) - **test:** fix description _(by Philipp Burckhardt)_
