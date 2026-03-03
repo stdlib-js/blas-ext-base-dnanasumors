@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`0a04e3a`](https://github.com/stdlib-js/stdlib/commit/0a04e3a7ee2aa25b2f6ae417f0575aa7c07f5781) - **bench:** refactor to use dynamic memory allocation in `blas/ext/base/dnanasumors` [(#10645)](https://github.com/stdlib-js/stdlib/pull/10645) _(by Prajjwal Bajpai)_
 -   [`4310d8b`](https://github.com/stdlib-js/stdlib/commit/4310d8bfe49580a9a170d96a984b33529dfa9ca1) - **bench:** refactor to use string interpolation in `blas/ext/base/dnanasumors` [(#10646)](https://github.com/stdlib-js/stdlib/pull/10646) _(by Prajjwal Bajpai)_
 
 </details>
